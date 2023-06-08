@@ -1,2 +1,2 @@
 # Programs-Core-Java-Concepts
-Brushing up on Core Java COncepts using basic programs
+Brushing up on Core Java Concepts using basic programs
