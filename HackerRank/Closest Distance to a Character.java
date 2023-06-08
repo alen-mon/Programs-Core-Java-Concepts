@@ -1,6 +1,9 @@
 
 import java.util.*;
-
+/**
+ * @author 19epci004- Alen Morres
+ *
+ */
 class Solution {
     public int[] solve(String s, String c) {
         Integer[] ret = new Integer[s.length()];
