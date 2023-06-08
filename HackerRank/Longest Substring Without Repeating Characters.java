@@ -1,4 +1,11 @@
-class Solution {
+import java.util.*;
+import java.lang.*;
+/**
+ * @author 19epci004- Alen Morres
+ *
+ */
+
+class Main {
     public int lengthOfLongestSubstring(String s) {
         Set<Character>set=new HashSet<>();
         int maxLength=0;
