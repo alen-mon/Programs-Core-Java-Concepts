@@ -1,0 +1,42 @@
+public class ImmutableDataExample {
+    public static void main(String[] args) {
+        Point point = new Point(5, 10);
+        System.out.println("Original Point: " + point);
+
+        // Attempting to modify the point
+        // This will not change the original point
+        Point modifiedPoint = modifyPoint(point, 20, 30);
+        System.out.println("Modified Point: " + modifiedPoint);
+
+        // The original point remains unchanged
+        System.out.println("Original Point (after modification): " + point);
+    }
+
+    public static Point modifyPoint(Point point, int newX, int newY) {
+        // Create and return a new Point with the modified coordinates
+        return new Point(newX, newY);
+    }
+}
+
+final class Point {
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
+}
