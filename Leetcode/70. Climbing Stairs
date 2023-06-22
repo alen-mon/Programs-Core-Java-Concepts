@@ -1,0 +1,23 @@
+class Solution {
+    public int climbStairs(int n) {
+       if (n <= 0)
+            return 0;
+
+        // Create an array to store the number of ways to reach each step
+        int[] dp = new int[n + 1];
+
+        // Base cases
+        dp[0] = 1;
+        dp[1] = 1;
+
+        // Calculate the number of ways for each step
+        for (int i = 2; i <= n; i++) {
+            // The number of ways to reach the current step is the sum of
+            // the number of ways to reach the previous two steps
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+
+        // Return the number of ways to reach the top step
+        return dp[n];
+    }
+}
