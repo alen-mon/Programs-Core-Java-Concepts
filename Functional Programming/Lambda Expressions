@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class LambdaExpressionsExample {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+        names.add("David");
+        names.add("Eve");
+
+        // Using lambda expression to filter names starting with 'A'
+        List<String> filteredNames = filterNames(names, name -> name.startsWith("A"));
+
+        System.out.println("Filtered names: " + filteredNames);
+    }
+
+    public static List<String> filterNames(List<String> names, Predicate<String> condition) {
+        List<String> filteredList = new ArrayList<>();
+
+        for (String name : names) {
+            if (condition.test(name)) {
+                filteredList.add(name);
+            }
+        }
+
+        return filteredList;
+    }
+}
