@@ -9,7 +9,7 @@
  * }
  */
 class Solution {
-    public: ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode temp1 = l1;
         ListNode temp2 = l2;
         int sum = temp1.val+temp2.val;
