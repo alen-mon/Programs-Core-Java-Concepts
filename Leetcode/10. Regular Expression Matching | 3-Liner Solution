@@ -1,0 +1,7 @@
+class Solution {
+    public boolean isMatch(String s, String p) {
+        java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("^" + p + "$");
+        java.util.regex.Matcher matcher = pattern.matcher(s);
+        return matcher.matches();
+    }
+}
